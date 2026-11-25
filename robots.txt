@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siam.dev/sitemap.xml
+Sitemap: https://spiamahmed69.github.io/siam.dev/sitemap.xml

@@ -2,7 +2,7 @@
 
 Personal portfolio website for **SP Siam Ahmed**, Full Stack Web Developer from Bangladesh.
 
-- Live site (after deployment): https://siam.dev/
+- Live site (after deployment): https://spiamahmed69.github.io/siam.dev/
 - Stack: plain **HTML5 + CSS3 + vanilla JavaScript (ES6+)**. No frameworks, no build step.
 - Architecture: **HTML-first**. All content is written directly in the HTML files. JavaScript is only for interactions (mobile menu, theme toggle, scroll reveal, back-to-top, blog search/filter, contact validation, copy-code buttons). The site is fully readable with JavaScript disabled.
 
@@ -15,15 +15,15 @@ Personal portfolio website for **SP Siam Ahmed**, Full Stack Web Developer from 
 - `style.css`, `responsive.css`, `script.js` — main styles and interactions
 - `blog/blog.css`, `blog/blog.js` — blog-only styles and search/filter
 - `assets/images/` — SVG profile image, project cover art, favicon
-- `robots.txt`, `sitemap.xml`, `CNAME` (contains `siam.dev`), `site.webmanifest`
+- `robots.txt`, `sitemap.xml`, `site.webmanifest` (no `CNAME` for now — see below)
 
-## Deploy (GitHub Pages + custom domain)
+## Deploy (GitHub Pages)
 
-1. Create a GitHub repository (e.g. `Spsiamahmed/siam.dev`) and push this folder's contents to the `main` branch.
+1. Create a GitHub repository (e.g. `spiamahmed69/siam.dev`) and push this folder's contents to the `main` branch.
 2. In the repository: **Settings → Pages → Build and deployment → Deploy from a branch**, select branch `main`, folder `/ (root)`, and save.
-3. The site will be live at `https://spsiamahmed.github.io/siam.dev/` (or `https://<username>.github.io/` if the repo is named `<username>.github.io`).
-4. Custom domain `siam.dev`: the `CNAME` file already contains `siam.dev`. At your domain registrar, add A records for the apex domain pointing to GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 — verify current addresses in the GitHub Pages docs) and a CNAME record for `www` pointing to `<username>.github.io`. Then enable **Enforce HTTPS** in Settings → Pages.
-5. After launch, verify the site in Google Search Console and submit `https://siam.dev/sitemap.xml`.
+3. The site is live at `https://spiamahmed69.github.io/siam.dev/`.
+4. Custom domain `siam.dev` (later, when its DNS is ready): add a `CNAME` file containing `siam.dev`, and at your domain registrar add A records for the apex domain pointing to GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 — verify current addresses in the GitHub Pages docs) and a CNAME record for `www` pointing to `spiamahmed69.github.io`. Then update the canonical/sitemap URLs back to `https://siam.dev/...` and enable **Enforce HTTPS** in Settings → Pages.
+5. After launch, verify the site in Google Search Console and submit `https://spiamahmed69.github.io/siam.dev/sitemap.xml`.
 
 ## Notes
 
