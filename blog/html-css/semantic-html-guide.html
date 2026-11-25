@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Semantic Elements Explained | SIAM.DEV Blog</title>
+<meta name="description" content="What semantic HTML is, why it matters for accessibility and SEO, and which tags to use instead of endless divs — with a practical page skeleton.">
+<link rel="canonical" href="https://siam.dev/blog/html-css/semantic-html-guide.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTML Semantic Elements Explained | SIAM.DEV Blog">
+<meta property="og:description" content="What semantic HTML is, why it matters for accessibility and SEO, and which tags to use instead of endless divs — with a practical page skeleton.">
+<meta property="og:url" content="https://siam.dev/blog/html-css/semantic-html-guide.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HTML Semantic Elements Explained | SIAM.DEV Blog">
+<meta name="twitter:description" content="What semantic HTML is, why it matters for accessibility and SEO, and which tags to use instead of endless divs — with a practical page skeleton.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "HTML Semantic Elements Explained",
+  "description": "What semantic HTML is, why it matters for accessibility and SEO, and which tags to use instead of endless divs — with a practical page skeleton.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/html-css/semantic-html-guide.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "HTML &amp; CSS", "item": "https://siam.dev/blog/categories/html-css/"},
+    {"@type": "ListItem", "position": 4, "name": "HTML Semantic Elements Explained", "item": "https://siam.dev/blog/html-css/semantic-html-guide.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/html-css/">HTML &amp; CSS</a> &nbsp;/&nbsp; <span aria-current="page">HTML Semantic Elements Explained</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">HTML &amp; CSS</p>
+    <h1>HTML Semantic Elements Explained</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#what-is-semantic-html">What Is Semantic HTML?</a></li><li><a href="#common-semantic-elements">Common Semantic Elements</a></li><li><a href="#semantic-vs-div">Semantic HTML vs Divs</a></li><li><a href="#seo-accessibility">Why It Helps SEO and Accessibility</a></li><li><a href="#practical-example">A Practical Example</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">Semantic HTML means using tags that describe what the content actually is — a header, a navigation menu, an article — instead of wrapping everything in generic divs. It is one of the simplest habits that makes a website better for readers, search engines and assistive technology at the same time.</p>
+<h2 id="what-is-semantic-html">What Is Semantic HTML?</h2>
+<p>HTML tags fall into two groups. Semantic tags carry meaning: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code> and <code>&lt;aside&gt;</code> all describe the role of the content inside them. Non-semantic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> say nothing about the content — they are only containers for styling.</p>
+<p>A browser renders both the same way by default. The difference is invisible to the eye and very real to everything else that reads your page: screen readers, search engines and other developers.</p>
+<h2 id="common-semantic-elements">Common Semantic Elements</h2>
+<ul>
+<li><strong>&lt;header&gt;</strong> — introductory content: a logo, a site title, a navigation bar.</li>
+<li><strong>&lt;nav&gt;</strong> — a block of navigation links.</li>
+<li><strong>&lt;main&gt;</strong> — the main content of the page. There should be exactly one per page.</li>
+<li><strong>&lt;article&gt;</strong> — a self-contained piece of content, such as a blog post or a news story.</li>
+<li><strong>&lt;section&gt;</strong> — a thematic grouping of content, usually with its own heading.</li>
+<li><strong>&lt;aside&gt;</strong> — content related to the main content, such as a sidebar.</li>
+<li><strong>&lt;footer&gt;</strong> — closing content: copyright, links, contact details.</li>
+<li><strong>&lt;figure&gt;</strong> and <strong>&lt;figcaption&gt;</strong> — an image or diagram with its caption.</li>
+</ul>
+<h2 id="semantic-vs-div">Semantic HTML vs Divs</h2>
+<p>Compare the same page outline written two ways. The first version is a wall of divs; the second says what each part is:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>&lt;!-- Non-semantic: works, but says nothing --&gt;
+&lt;div class="header"&gt;...&lt;/div&gt;
+&lt;div class="content"&gt;
+  &lt;div class="post"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="footer"&gt;...&lt;/div&gt;
+
+&lt;!-- Semantic: the structure is self-explanatory --&gt;
+&lt;header&gt;...&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+<p>Use divs when no semantic tag fits — for layout wrappers and styling hooks. Use semantic tags whenever the content has a real role. A good rule: if you are about to write <code>class="header"</code> on a div, use a <code>&lt;header&gt;</code> instead.</p>
+<h2 id="seo-accessibility">Why It Helps SEO and Accessibility</h2>
+<p>Search engines use page structure to understand content. A page with a clear <code>&lt;main&gt;</code>, one <code>&lt;h1&gt;</code> and a sensible heading order is easier to index correctly, and headings inside an <code>&lt;article&gt;</code> are understood as part of that article. The <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO Starter Guide</a> recommends clear, descriptive structure for exactly this reason, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN HTML</a> documents every semantic element.</p>
+<p>For accessibility the effect is even bigger. Screen reader users navigate by landmarks — they can jump straight to the navigation, the main content or the footer. A page made only of divs has no landmarks at all, so those users have to listen through everything in order. Semantic tags also give you a free heading outline, which is how many people scan a page.</p>
+<h2 id="practical-example">A Practical Example</h2>
+<p>Here is a minimal, correct page skeleton you can reuse for almost any site:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav aria-label="Primary"&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+      &lt;a href="/about/"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Article Title&lt;/h1&gt;
+      &lt;p&gt;Article content goes here.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 Example&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Notice the details: one <code>&lt;h1&gt;</code>, one <code>&lt;main&gt;</code>, an <code>aria-label</code> on the navigation so screen readers can name it, and the language declared on the <code>&lt;html&gt;</code> tag.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Semantic HTML costs nothing and improves almost everything: accessibility, search visibility, maintainability and the experience of the next developer who reads your code. Start with the page skeleton above, reach for a semantic tag before a div, and keep your heading order honest. Your future self — and your visitors — will thank you.</p>
+<p>Next, learn how to lay that structure out: read <a href="/blog/html-css/css-flexbox-grid.html">CSS Flexbox vs CSS Grid</a> and <a href="/blog/html-css/responsive-web-design.html">Responsive Web Design Using CSS</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/html-css/css-flexbox-grid.html">CSS Flexbox vs CSS Grid</a></li><li><a href="/blog/html-css/responsive-web-design.html">Responsive Web Design Using CSS</a></li><li><a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/html-css/">More HTML &amp; CSS articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

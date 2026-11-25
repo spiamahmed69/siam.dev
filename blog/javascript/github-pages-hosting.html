@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Host a Website on GitHub Pages | SIAM.DEV Blog</title>
+<meta name="description" content="Publish a static website for free with GitHub Pages, step by step: repository, files, enabling Pages, updates and limits.">
+<link rel="canonical" href="https://siam.dev/blog/javascript/github-pages-hosting.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Host a Website on GitHub Pages | SIAM.DEV Blog">
+<meta property="og:description" content="Publish a static website for free with GitHub Pages, step by step: repository, files, enabling Pages, updates and limits.">
+<meta property="og:url" content="https://siam.dev/blog/javascript/github-pages-hosting.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Host a Website on GitHub Pages | SIAM.DEV Blog">
+<meta name="twitter:description" content="Publish a static website for free with GitHub Pages, step by step: repository, files, enabling Pages, updates and limits.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Host a Website on GitHub Pages",
+  "description": "Publish a static website for free with GitHub Pages, step by step: repository, files, enabling Pages, updates and limits.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/javascript/github-pages-hosting.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "JavaScript", "item": "https://siam.dev/blog/categories/javascript/"},
+    {"@type": "ListItem", "position": 4, "name": "How to Host a Website on GitHub Pages", "item": "https://siam.dev/blog/javascript/github-pages-hosting.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/javascript/">JavaScript</a> &nbsp;/&nbsp; <span aria-current="page">How to Host a Website on GitHub Pages</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">JavaScript</p>
+    <h1>How to Host a Website on GitHub Pages</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#what-is-github-pages">What Is GitHub Pages?</a></li><li><a href="#before-you-start">Before You Start</a></li><li><a href="#create-repository">Create the Repository</a></li><li><a href="#add-your-files">Add Your Files</a></li><li><a href="#enable-pages">Enable GitHub Pages</a></li><li><a href="#update-your-site">Updating Your Site</a></li><li><a href="#limits">Limits to Know</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">GitHub Pages is a free hosting service that publishes a static website straight from a GitHub repository. If your site is HTML, CSS and JavaScript — like this one — you can have it live on the public internet in about ten minutes, with no server to manage and no hosting bill.</p>
+<h2 id="what-is-github-pages">What Is GitHub Pages?</h2>
+<p>GitHub Pages takes the files in a repository and serves them as a website. Every push you make updates the live site automatically. It supports plain HTML/CSS/JavaScript, Jekyll, and any static site generator whose output is HTML. It does not run server-side code — no PHP, no Node.js, no databases — which is exactly why it is simple and reliable.</p>
+<p>Your site gets an address like <code>https://username.github.io/repository/</code>, or <code>https://username.github.io/</code> for a special repository named <code>username.github.io</code>. You can also connect your own domain, covered in <a href="/blog/javascript/github-pages-custom-domain.html">How to Connect a Custom Domain to GitHub Pages</a>.</p>
+<h2 id="before-you-start">Before You Start</h2>
+<p>You need a GitHub account and Git installed on your computer. Your website files should be ready in a folder: an <code>index.html</code> at the root, plus your CSS, JavaScript and images. Test the site locally first — open <code>index.html</code> in a browser, or serve the folder with a simple local server — so you know it works before you publish it.</p>
+<h2 id="create-repository">Create the Repository</h2>
+<p>On GitHub, create a new repository. For a project site, any name works — for example <code>my-portfolio</code>. For a personal site at <code>username.github.io</code>, the repository must be named exactly <code>username.github.io</code>. Make it public; GitHub Pages on the free plan serves public repositories.</p>
+<h2 id="add-your-files">Add Your Files</h2>
+<p>Push your files to the repository with Git:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>git init
+git add .
+git commit -m "First version of my website"
+git branch -M main
+git remote add origin https://github.com/username/my-portfolio.git
+git push -u origin main</code></pre>
+<p>Replace <code>username</code> and <code>my-portfolio</code> with your own values. If you prefer not to use the command line, you can upload the files through the GitHub website instead — the result is the same.</p>
+<h2 id="enable-pages">Enable GitHub Pages</h2>
+<p>Go to the repository on GitHub, open <strong>Settings</strong>, then <strong>Pages</strong> in the left sidebar. Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong>, select the <code>main</code> branch and the <code>/ (root)</code> folder, and save. GitHub will build your site — usually within a minute or two — and show you the live URL at the top of the same page.</p>
+<p>The official documentation at <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a> covers every option, including deploying from a <code>/docs</code> folder or from a GitHub Actions workflow.</p>
+<h2 id="update-your-site">Updating Your Site</h2>
+<p>To update the live site, change the files, commit and push. GitHub rebuilds and redeploys automatically — there is nothing else to do. If a change does not appear straight away, wait a minute and hard-refresh your browser (Ctrl+Shift+R or Cmd+Shift+R), because browsers cache pages aggressively.</p>
+<h2 id="limits">Limits to Know</h2>
+<ul>
+<li><strong>Static only:</strong> no server-side code, no databases, no form processing. A contact form needs a form service, or a mailto link like the one on this site.</li>
+<li><strong>Size:</strong> repositories have a recommended limit of 1 GB, and individual files should stay under 100 MB.</li>
+<li><strong>Bandwidth:</strong> the free soft limit is 100 GB of bandwidth per month — far more than a personal site normally uses.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>GitHub Pages is the fastest honest route from files on your computer to a live website: create a repository, push your files, enable Pages, and share the link. It is free, it deploys on every push, and it is how many developers — including me — host their portfolios.</p>
+<p>Next: <a href="/blog/javascript/github-pages-custom-domain.html">How to Connect a Custom Domain to GitHub Pages</a> and <a href="/blog/seo/google-search-console-guide.html">Google Search Console Setup Guide</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/javascript/github-pages-custom-domain.html">How to Connect a Custom Domain to GitHub Pages</a></li><li><a href="/blog/html-css/developer-portfolio.html">Building a Developer Portfolio with HTML, CSS and JavaScript</a></li><li><a href="/blog/seo/google-search-console-guide.html">Google Search Console Setup Guide</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/javascript/">More JavaScript articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

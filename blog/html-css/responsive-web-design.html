@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Web Design Using CSS | SIAM.DEV Blog</title>
+<meta name="description" content="A practical guide to responsive web design: mobile-first CSS, fluid layouts, media queries, clamp() typography and testing on real screen sizes.">
+<link rel="canonical" href="https://siam.dev/blog/html-css/responsive-web-design.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Responsive Web Design Using CSS | SIAM.DEV Blog">
+<meta property="og:description" content="A practical guide to responsive web design: mobile-first CSS, fluid layouts, media queries, clamp() typography and testing on real screen sizes.">
+<meta property="og:url" content="https://siam.dev/blog/html-css/responsive-web-design.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Responsive Web Design Using CSS | SIAM.DEV Blog">
+<meta name="twitter:description" content="A practical guide to responsive web design: mobile-first CSS, fluid layouts, media queries, clamp() typography and testing on real screen sizes.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Responsive Web Design Using CSS",
+  "description": "A practical guide to responsive web design: mobile-first CSS, fluid layouts, media queries, clamp() typography and testing on real screen sizes.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/html-css/responsive-web-design.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "HTML &amp; CSS", "item": "https://siam.dev/blog/categories/html-css/"},
+    {"@type": "ListItem", "position": 4, "name": "Responsive Web Design Using CSS", "item": "https://siam.dev/blog/html-css/responsive-web-design.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/html-css/">HTML &amp; CSS</a> &nbsp;/&nbsp; <span aria-current="page">Responsive Web Design Using CSS</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">HTML &amp; CSS</p>
+    <h1>Responsive Web Design Using CSS</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#mobile-first">Start Mobile-First</a></li><li><a href="#fluid-layouts">Fluid Layouts</a></li><li><a href="#media-queries">Media Queries That Make Sense</a></li><li><a href="#responsive-typography">Responsive Typography</a></li><li><a href="#images-media">Responsive Images and Media</a></li><li><a href="#testing">Testing on Real Sizes</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">Responsive web design means a website works well on every screen — a 320px phone, a tablet, a laptop and a wide desktop — from a single codebase. It is not a feature you add at the end; it is how the site is built from the first line of CSS.</p>
+<h2 id="mobile-first">Start Mobile-First</h2>
+<p>Write your base CSS for the smallest screen first, then add complexity for larger screens with <code>min-width</code> media queries. This keeps the mobile experience fast and simple, and it matches how most people actually browse: mobile traffic is the majority of web traffic in most countries, including Bangladesh.</p>
+<p>Mobile-first also forces good decisions. If a section works on a 360px screen, it almost always works everywhere else. The reverse is not true.</p>
+<h2 id="fluid-layouts">Fluid Layouts</h2>
+<p>Avoid fixed pixel widths for layout containers. Use percentages, <code>fr</code> units in Grid, flexible Flexbox items, and a <code>max-width</code> with automatic margins to centre content:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}</code></pre>
+<h2 id="media-queries">Media Queries That Make Sense</h2>
+<p>Choose breakpoints where your design actually breaks, not by device brand. Common, practical breakpoints are around 576px, 768px, 1024px and 1280px. A layout that switches from one column to two at 768px and to three at 1024px covers phones, tablets and desktops cleanly.</p>
+<p>Inside a media query, change as little as possible — usually just the number of columns, the font size and the spacing. If a query rewrites half the page, the base design probably needs rethinking.</p>
+<h2 id="responsive-typography">Responsive Typography</h2>
+<p>Use <code>clamp()</code> so headings scale smoothly instead of jumping between sizes:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+}</code></pre>
+<p><code>clamp(minimum, preferred, maximum)</code> guarantees the text never gets smaller than the minimum or larger than the maximum, while scaling with the viewport in between. Body text can stay at a comfortable 16px — never smaller, for readability.</p>
+<h2 id="images-media">Responsive Images and Media</h2>
+<p>Images are the most common cause of horizontal scrolling. Two rules fix most of it:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body { overflow-x: hidden; }</code></pre>
+<p>Also set <code>width</code> and <code>height</code> attributes on images so the browser reserves space before they load — that prevents layout shift, which is one of the <a href="/blog/seo/core-web-vitals.html">Core Web Vitals</a>. Add <code>loading="lazy"</code> to images below the fold.</p>
+<h2 id="testing">Testing on Real Sizes</h2>
+<p>Test at 320px, 360px, 375px, 768px, 1024px and 1440px at minimum. Check for horizontal scrolling, overlapping text, clipped headings and buttons that are too small to tap (aim for at least 44px of touch target). Browser developer tools can emulate these sizes, but nothing replaces opening the site on a real phone at least once.</p>
+<p>Google also indexes the mobile version of your site first — mobile-first indexing — so a broken mobile layout is also an SEO problem. The <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO Starter Guide</a> covers mobile-friendliness as a core requirement.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Responsive design is a discipline, not a trick: mobile-first CSS, fluid layouts, sensible breakpoints, clamp() typography, responsive images and real testing. Build that way from the start and your site will feel right on every device your visitors use.</p>
+<p>Related reading: <a href="/blog/html-css/css-flexbox-grid.html">CSS Flexbox vs CSS Grid</a> and <a href="/blog/seo/image-optimization.html">Image Optimization for Faster Websites</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/html-css/css-flexbox-grid.html">CSS Flexbox vs CSS Grid</a></li><li><a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a></li><li><a href="/blog/seo/image-optimization.html">Image Optimization for Faster Websites</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/html-css/">More HTML &amp; CSS articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

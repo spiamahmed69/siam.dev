@@ -1,0 +1,10 @@
+/* SIAM.DEV Blog — extra styles on top of the main stylesheet. */
+.blog-hero{padding:56px 0 8px}
+.blog-hero p{max-width:760px}
+.no-results{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
+.no-results.show{display:block}
+.pagination{display:flex;gap:8px;justify-content:center;margin-top:2rem;flex-wrap:wrap}
+.pagination button{background:var(--card);border:1px solid var(--border);color:#fff;border-radius:8px;padding:9px 15px;cursor:pointer;font:inherit}
+.pagination button.active,.pagination button:hover{border-color:var(--purple);background:var(--purple)}
+.pagination button:disabled{opacity:.45;cursor:default}
+.article-card.hidden,.post-card.hidden{display:none}

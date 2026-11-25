@@ -1,0 +1,13 @@
+{
+  "name": "SIAM.DEV — SP Siam Ahmed",
+  "short_name": "SIAM.DEV",
+  "description": "Portfolio of SP Siam Ahmed, Full Stack Web Developer from Bangladesh.",
+  "start_url": "https://siam.dev/",
+  "scope": "https://siam.dev/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    { "src": "/assets/images/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

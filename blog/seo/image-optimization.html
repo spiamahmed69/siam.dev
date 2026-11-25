@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Optimization for Faster Websites | SIAM.DEV Blog</title>
+<meta name="description" content="Right-sized images, modern formats, lazy loading and dimensions — the biggest easy win for page speed, with practical examples.">
+<link rel="canonical" href="https://siam.dev/blog/seo/image-optimization.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Optimization for Faster Websites | SIAM.DEV Blog">
+<meta property="og:description" content="Right-sized images, modern formats, lazy loading and dimensions — the biggest easy win for page speed, with practical examples.">
+<meta property="og:url" content="https://siam.dev/blog/seo/image-optimization.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Optimization for Faster Websites | SIAM.DEV Blog">
+<meta name="twitter:description" content="Right-sized images, modern formats, lazy loading and dimensions — the biggest easy win for page speed, with practical examples.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Image Optimization for Faster Websites",
+  "description": "Right-sized images, modern formats, lazy loading and dimensions — the biggest easy win for page speed, with practical examples.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/seo/image-optimization.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Website SEO", "item": "https://siam.dev/blog/categories/seo/"},
+    {"@type": "ListItem", "position": 4, "name": "Image Optimization for Faster Websites", "item": "https://siam.dev/blog/seo/image-optimization.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/seo/">Website SEO</a> &nbsp;/&nbsp; <span aria-current="page">Image Optimization for Faster Websites</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">Website SEO</p>
+    <h1>Image Optimization for Faster Websites</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#why-images-matter">Why Images Matter Most</a></li><li><a href="#right-size">Serve the Right Size</a></li><li><a href="#modern-formats">Use Modern Formats</a></li><li><a href="#compress">Compress Without Visible Loss</a></li><li><a href="#lazy-loading">Lazy Loading</a></li><li><a href="#dimensions-cls">Dimensions and Layout Shift</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">Images are usually the heaviest part of a web page. A single unoptimised photo can weigh more than all of your HTML, CSS and JavaScript combined — and it is the most common reason a page loads slowly. The good news: image optimisation is also one of the easiest performance wins there is.</p>
+<h2 id="why-images-matter">Why Images Matter Most</h2>
+<p>On a typical page, images account for roughly half the total bytes. That affects everything: the time to first paint, the Largest Contentful Paint (see <a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a>), mobile data usage, and the experience of visitors on slow connections. Optimising images is often the single biggest improvement you can make to a slow site, and it takes minutes.</p>
+<h2 id="right-size">Serve the Right Size</h2>
+<p>Never serve a 4000px photo to display it at 400px. Resize images to the largest size they will actually be shown at — and if the same image appears at several sizes, generate several versions and let the browser choose with <code>srcset</code>:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>&lt;img src="photo-800.jpg"
+     srcset="photo-400.jpg 400w,
+             photo-800.jpg 800w,
+             photo-1200.jpg 1200w"
+     sizes="(max-width: 600px) 400px, 800px"
+     width="800" height="600"
+     alt="A description of the photo"&gt;</code></pre>
+<p>The browser picks the smallest file that still looks sharp on the visitor's screen. On a phone it downloads the 400px version; on a desktop, the 800px or 1200px version. Nobody downloads more than they need.</p>
+<h2 id="modern-formats">Use Modern Formats</h2>
+<p>WebP and AVIF compress far better than JPEG and PNG for the same visual quality — typically 25–35% smaller for WebP, and more for AVIF. Use WebP as the default today; it is supported by every modern browser. Keep PNG only for images that need transparency or pixel-perfect edges, such as logos and diagrams, and keep JPEG as a fallback where WebP is not available.</p>
+<p>For simple graphics — icons, logos, illustrations — consider SVG instead. SVG is a vector format, so it stays sharp at any size and is often only a few kilobytes. This site's cover art and profile image are SVG for exactly that reason.</p>
+<h2 id="compress">Compress Without Visible Loss</h2>
+<p>Compression tools remove data the eye cannot see. A photo exported at 80% JPEG quality usually looks identical to the original at a fraction of the size. Free tools like Squoosh (from Google) let you compare before and after side by side — aim for the smallest file where you cannot tell the difference.</p>
+<p>As a rule of thumb: a hero image should be under 200 KB, a normal content image under 100 KB, and a thumbnail under 30 KB. If an image is bigger than that, it can almost always be smaller.</p>
+<h2 id="lazy-loading">Lazy Loading</h2>
+<p>Images below the fold do not need to load before the visitor scrolls to them. Add <code>loading="lazy"</code> and the browser defers them automatically:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>&lt;!-- Load immediately: hero image --&gt;
+&lt;img src="hero.jpg" alt="Hero image" fetchpriority="high"&gt;
+
+&lt;!-- Load when scrolled to: everything else --&gt;
+&lt;img src="photo.jpg" alt="Content photo" loading="lazy"&gt;</code></pre>
+<p>Do not lazy-load the hero image — that delays the Largest Contentful Paint. Everything else can wait until it is needed. This one attribute can cut the initial page weight in half on image-heavy pages.</p>
+<h2 id="dimensions-cls">Dimensions and Layout Shift</h2>
+<p>Always set <code>width</code> and <code>height</code> attributes on images. The browser then reserves the right amount of space before the image loads, so the text below it does not jump when the image arrives. That single habit fixes most Cumulative Layout Shift problems — see <a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a> for why that score matters.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Image optimisation is five habits: right-size every image, use WebP (or SVG for graphics), compress sensibly, lazy-load everything below the fold, and always set dimensions. Do those five and your pages will load noticeably faster — on every device, on every connection — with no visible difference in quality. Measure the result with <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a> and enjoy the improvement.</p>
+<p>Related: <a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a> and <a href="/blog/html-css/responsive-web-design.html">Responsive Web Design Using CSS</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a></li><li><a href="/blog/html-css/responsive-web-design.html">Responsive Web Design Using CSS</a></li><li><a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/seo/">More Website SEO articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

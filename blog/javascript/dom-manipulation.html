@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding JavaScript DOM Manipulation | SIAM.DEV Blog</title>
+<meta name="description" content="How to select, change and listen to elements on a page with vanilla JavaScript — safely, with practical examples.">
+<link rel="canonical" href="https://siam.dev/blog/javascript/dom-manipulation.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Understanding JavaScript DOM Manipulation | SIAM.DEV Blog">
+<meta property="og:description" content="How to select, change and listen to elements on a page with vanilla JavaScript — safely, with practical examples.">
+<meta property="og:url" content="https://siam.dev/blog/javascript/dom-manipulation.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Understanding JavaScript DOM Manipulation | SIAM.DEV Blog">
+<meta name="twitter:description" content="How to select, change and listen to elements on a page with vanilla JavaScript — safely, with practical examples.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Understanding JavaScript DOM Manipulation",
+  "description": "How to select, change and listen to elements on a page with vanilla JavaScript — safely, with practical examples.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/javascript/dom-manipulation.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "JavaScript", "item": "https://siam.dev/blog/categories/javascript/"},
+    {"@type": "ListItem", "position": 4, "name": "Understanding JavaScript DOM Manipulation", "item": "https://siam.dev/blog/javascript/dom-manipulation.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/javascript/">JavaScript</a> &nbsp;/&nbsp; <span aria-current="page">Understanding JavaScript DOM Manipulation</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">JavaScript</p>
+    <h1>Understanding JavaScript DOM Manipulation</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#what-is-the-dom">What Is the DOM?</a></li><li><a href="#selecting-elements">Selecting Elements</a></li><li><a href="#changing-content">Changing Content and Styles</a></li><li><a href="#events">Listening for Events</a></li><li><a href="#creating-elements">Creating and Removing Elements</a></li><li><a href="#safe-practices">Safe Practices</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">The DOM — the Document Object Model — is the browser's live, programmable map of your page. Every tag in your HTML becomes an object you can read, change and listen to with JavaScript. Understanding the DOM is what turns JavaScript knowledge into working websites.</p>
+<h2 id="what-is-the-dom">What Is the DOM?</h2>
+<p>When a browser loads a page, it parses the HTML into a tree of objects: the document at the root, elements as branches, text as leaves. JavaScript can walk that tree, change it, and the page on screen updates immediately. That is why a menu can open without reloading, and why a form can show an error the moment you type.</p>
+<p>The important rule is that the DOM is a live view of the page — change the DOM and you change what the user sees. Change it carelessly, and you can also break the page, so the habits in this article matter.</p>
+<h2 id="selecting-elements">Selecting Elements</h2>
+<p>Start by selecting the element you need. <code>querySelector</code> takes a CSS selector and returns the first match; <code>querySelectorAll</code> returns all matches:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>const title = document.querySelector("h1");
+const menuButton = document.querySelector("#menu-btn");
+const cards = document.querySelectorAll(".card");
+
+console.log(cards.length); // how many cards exist</code></pre>
+<p>Prefer selecting by <code>id</code> for unique elements and by class for groups. Always check that the element exists before using it — <code>querySelector</code> returns <code>null</code> when nothing matches, and calling a method on <code>null</code> throws an error.</p>
+<h2 id="changing-content">Changing Content and Styles</h2>
+<p>Change text with <code>textContent</code>, and change appearance by toggling classes rather than writing inline styles:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>// Safe: plain text, no HTML parsing
+title.textContent = "Updated Title";
+
+// Good: let CSS own the appearance
+menuButton.classList.add("open");
+menuButton.classList.toggle("open");
+
+// Avoid: inline styles scattered through JS
+title.style.color = "red"; // works, but hard to maintain</code></pre>
+<p>Use <code>textContent</code> instead of <code>innerHTML</code> whenever you are inserting text. <code>innerHTML</code> parses the string as HTML, which is a security risk if the text comes from a user, and it is slower. On this site, JavaScript never generates content at all — but when you do need to update text, <code>textContent</code> is the safe default.</p>
+<h2 id="events">Listening for Events</h2>
+<p>Events are how the page tells JavaScript that something happened — a click, a keypress, a form submission, a scroll:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>const form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // stop the page from reloading
+  // validate the form here
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    document.body.classList.remove("menu-open");
+  }
+});</code></pre>
+<p>One listener per element per event is enough in most cases. If you have many similar elements — say, a list of buttons — attach one listener to their shared parent and check which child was clicked. That technique, called event delegation, keeps your code small and fast.</p>
+<h2 id="creating-elements">Creating and Removing Elements</h2>
+<p>Sometimes you do need new elements — a message, a list item, a notification. Create them with the DOM API, not with HTML strings:</p>
+<pre><button class="copy-btn" type="button">Copy</button><code>const item = document.createElement("li");
+item.textContent = "New item";
+document.querySelector("#todo-list").appendChild(item);
+
+// Remove an element
+item.remove();</code></pre>
+<p>Creating elements this way keeps user input as text, which avoids the injection problems of <code>innerHTML</code>. It is a little more code, and it is worth it.</p>
+<h2 id="safe-practices">Safe Practices</h2>
+<ul>
+<li><strong>Wait for the DOM:</strong> put your script at the end of the body, or use <code>defer</code>, so the elements you select actually exist.</li>
+<li><strong>Check for null:</strong> guard every selection that might not exist on every page.</li>
+<li><strong>Prefer classes over inline styles:</strong> CSS stays in charge of appearance.</li>
+<li><strong>Prefer textContent over innerHTML:</strong> never parse user input as HTML.</li>
+<li><strong>Respect reduced motion:</strong> check <code>matchMedia("(prefers-reduced-motion: reduce)")</code> before animating.</li>
+</ul>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN JavaScript guide</a> documents every DOM method used here, with examples.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>DOM manipulation is a small set of skills — select, change, listen, create — applied with care. Master those, write safe code by default, and you can build every interaction a normal website needs: menus, themes, validation, search and filtering, all with vanilla JavaScript and no framework.</p>
+<p>Keep learning: <a href="/blog/javascript/javascript-basics.html">JavaScript Basics for Beginners</a> and <a href="/blog/html-css/developer-portfolio.html">Building a Developer Portfolio with HTML, CSS and JavaScript</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/javascript/javascript-basics.html">JavaScript Basics for Beginners</a></li><li><a href="/blog/html-css/developer-portfolio.html">Building a Developer Portfolio with HTML, CSS and JavaScript</a></li><li><a href="/blog/javascript/github-pages-hosting.html">How to Host a Website on GitHub Pages</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/javascript/">More JavaScript articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

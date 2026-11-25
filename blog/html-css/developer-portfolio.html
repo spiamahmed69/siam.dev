@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building a Developer Portfolio with HTML, CSS and JavaScript | SIAM.DEV Blog</title>
+<meta name="description" content="How to build a fast, honest developer portfolio with plain HTML, CSS and vanilla JavaScript — structure, design, performance, SEO and deployment.">
+<link rel="canonical" href="https://siam.dev/blog/html-css/developer-portfolio.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Building a Developer Portfolio with HTML, CSS and JavaScript | SIAM.DEV Blog">
+<meta property="og:description" content="How to build a fast, honest developer portfolio with plain HTML, CSS and vanilla JavaScript — structure, design, performance, SEO and deployment.">
+<meta property="og:url" content="https://siam.dev/blog/html-css/developer-portfolio.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building a Developer Portfolio with HTML, CSS and JavaScript | SIAM.DEV Blog">
+<meta name="twitter:description" content="How to build a fast, honest developer portfolio with plain HTML, CSS and vanilla JavaScript — structure, design, performance, SEO and deployment.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Building a Developer Portfolio with HTML, CSS and JavaScript",
+  "description": "How to build a fast, honest developer portfolio with plain HTML, CSS and vanilla JavaScript — structure, design, performance, SEO and deployment.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/html-css/developer-portfolio.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "HTML &amp; CSS", "item": "https://siam.dev/blog/categories/html-css/"},
+    {"@type": "ListItem", "position": 4, "name": "Building a Developer Portfolio with HTML, CSS and JavaScript", "item": "https://siam.dev/blog/html-css/developer-portfolio.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/html-css/">HTML &amp; CSS</a> &nbsp;/&nbsp; <span aria-current="page">Building a Developer Portfolio with HTML, CSS and JavaScript</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">HTML &amp; CSS</p>
+    <h1>Building a Developer Portfolio with HTML, CSS and JavaScript</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#plan-first">Plan Before You Build</a></li><li><a href="#html-first">HTML First: Content Before Code</a></li><li><a href="#structure">The Pages You Need</a></li><li><a href="#design">Design That Stays Out of the Way</a></li><li><a href="#performance-seo">Performance and SEO</a></li><li><a href="#deploy">Deploy and Share</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">A developer portfolio has one job: to show real work to real people, quickly and honestly. You do not need a framework, a database or a build step to do that well. Plain HTML, CSS and vanilla JavaScript — the stack this very site uses — is enough for a fast, accessible, professional portfolio.</p>
+<h2 id="plan-first">Plan Before You Build</h2>
+<p>Before writing code, decide three things: who the site is for, what they should find in ten seconds, and what proof you can honestly offer. For most developers that means a clear hero (name, role, location), a projects section with live links, a skills list and a way to contact you.</p>
+<p>Write the content first, in plain text. If the content is weak, no design will save it. If the content is strong and true, even a simple design looks professional.</p>
+<h2 id="html-first">HTML First: Content Before Code</h2>
+<p>Write every word directly in your HTML files. That way your content is readable in View Source, readable by search engines, and readable with JavaScript disabled. JavaScript should only add interaction — a mobile menu, a theme toggle, a back-to-top button — never the content itself.</p>
+<p>This matters more than it sounds. A portfolio whose projects are rendered by JavaScript is invisible to search engines that do not run scripts well, and invisible to any visitor with scripts blocked. HTML-first means your work is always visible.</p>
+<h2 id="structure">The Pages You Need</h2>
+<ul>
+<li><strong>Home</strong> — who you are, what you build, and your best three projects.</li>
+<li><strong>About</strong> — your story, your interests and your mission, in your own words.</li>
+<li><strong>Skills</strong> — the technologies you actually use, separated from the ones you are learning.</li>
+<li><strong>Projects</strong> — real projects with honest descriptions, technologies, live demos and source code.</li>
+<li><strong>Blog</strong> — articles that prove you understand what you build.</li>
+<li><strong>Contact</strong> — an email address and a form that is honest about how it works.</li>
+</ul>
+<h2 id="design">Design That Stays Out of the Way</h2>
+<p>Pick a small palette — a dark background, one or two accents — and two fonts at most. Use generous spacing, clear headings and cards with subtle borders. Avoid heavy gradients, glowing effects and glassmorphism: they date quickly and distract from the work. A portfolio should feel calm, professional and international.</p>
+<p>Make the navigation work on a 320px phone. Test every page with the keyboard alone. Add visible focus styles and honour <code>prefers-reduced-motion</code>. Accessibility is not extra credit; it is part of the quality of the work you are showing off.</p>
+<h2 id="performance-seo">Performance and SEO</h2>
+<p>A portfolio is also a demonstration of your engineering judgement, so make it fast: minimal CSS and JavaScript, system-friendly fonts, lazy-loaded images, and no unnecessary external requests. Then give every page a unique title, a unique meta description, a canonical URL, Open Graph tags and a sitemap. The <a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a> walks through all of it, and the <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO Starter Guide</a> is the official reference.</p>
+<h2 id="deploy">Deploy and Share</h2>
+<p>GitHub Pages is the simplest free host for a static portfolio: push your files to a repository, enable Pages, and your site is live. A custom domain takes one <code>CNAME</code> file and a DNS record — see <a href="/blog/javascript/github-pages-hosting.html">How to Host a Website on GitHub Pages</a> and <a href="/blog/javascript/github-pages-custom-domain.html">How to Connect a Custom Domain to GitHub Pages</a> for the full steps.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>A good developer portfolio is honest, fast and complete: real projects, real skills, real writing, and nothing invented. Build it with HTML, CSS and JavaScript, keep the content in the HTML, ship it on GitHub Pages, and let the work speak for itself.</p>
+<p>Start with the foundations: <a href="/blog/html-css/semantic-html-guide.html">HTML Semantic Elements Explained</a> and <a href="/blog/javascript/javascript-basics.html">JavaScript Basics for Beginners</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/html-css/semantic-html-guide.html">HTML Semantic Elements Explained</a></li><li><a href="/blog/javascript/github-pages-hosting.html">How to Host a Website on GitHub Pages</a></li><li><a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/html-css/">More HTML &amp; CSS articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

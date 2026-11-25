@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Search Console Setup Guide | SIAM.DEV Blog</title>
+<meta name="description" content="Verify your site, submit your sitemap and read the reports that show what Google actually sees — a step-by-step setup guide.">
+<link rel="canonical" href="https://siam.dev/blog/seo/google-search-console-guide.html">
+<meta name="author" content="SP Siam Ahmed">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Google Search Console Setup Guide | SIAM.DEV Blog">
+<meta property="og:description" content="Verify your site, submit your sitemap and read the reports that show what Google actually sees — a step-by-step setup guide.">
+<meta property="og:url" content="https://siam.dev/blog/seo/google-search-console-guide.html">
+<meta property="og:site_name" content="SIAM.DEV">
+<meta property="og:image" content="https://siam.dev/assets/images/profile.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Search Console Setup Guide | SIAM.DEV Blog">
+<meta name="twitter:description" content="Verify your site, submit your sitemap and read the reports that show what Google actually sees — a step-by-step setup guide.">
+<meta name="twitter:image" content="https://siam.dev/assets/images/profile.svg">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../responsive.css">
+<link rel="stylesheet" href="../blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Search Console Setup Guide",
+  "description": "Verify your site, submit your sitemap and read the reports that show what Google actually sees — a step-by-step setup guide.",
+  "author": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "publisher": { "@type": "Person", "name": "SP Siam Ahmed", "url": "https://siam.dev/" },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://siam.dev/blog/seo/google-search-console-guide.html" },
+  "inLanguage": "en"
+},
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siam.dev/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://siam.dev/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Website SEO", "item": "https://siam.dev/blog/categories/seo/"},
+    {"@type": "ListItem", "position": 4, "name": "Google Search Console Setup Guide", "item": "https://siam.dev/blog/seo/google-search-console-guide.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+    <nav aria-label="Primary">
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="primary-nav">
+<li><a href="../../">Home</a></li>
+<li><a href="../../about/">About</a></li>
+<li><a href="../../skills/">Skills</a></li>
+<li><a href="../../projects/">Projects</a></li>
+<li><a href="../../services/">Services</a></li>
+<li><a href="../../journey/">Journey</a></li>
+<li><a href="../../blog/" aria-current="page">Blog</a></li>
+<li><a href="../../contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">&#9788;</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; <a href="/blog/categories/seo/">Website SEO</a> &nbsp;/&nbsp; <span aria-current="page">Google Search Console Setup Guide</span></nav>
+<article class="article">
+  <div class="container">
+    <p class="eyebrow">Website SEO</p>
+    <h1>Google Search Console Setup Guide</h1>
+    <p class="article-meta">By <strong>SP Siam Ahmed</strong> &middot; Published 26 November 2026 &middot; Updated 26 November 2026</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ul><li><a href="#what-is-search-console">What Is Google Search Console?</a></li><li><a href="#add-your-property">Add Your Property</a></li><li><a href="#verify-ownership">Verify Ownership</a></li><li><a href="#submit-your-sitemap">Submit Your Sitemap</a></li><li><a href="#reports-worth-reading">Reports Worth Reading</a></li><li><a href="#common-issues">Common Issues</a></li><li><a href="#conclusion">Conclusion</a></li></ul></nav>
+<p class="lead">Google Search Console is Google's free tool that shows you how your site appears in search results: which pages are indexed, which queries bring visitors, and what is broken. If you have a website, setting it up is one of the first things you should do — it costs nothing and it tells you the truth about your site.</p>
+<h2 id="what-is-search-console">What Is Google Search Console?</h2>
+<p>Search Console is the official channel between your website and Google Search. It does not improve your rankings by itself — no tool does — but it shows you what Google sees: crawl errors, indexing problems, mobile usability issues, and the actual search queries that lead people to your pages. Without it, you are guessing. With it, you are reading the report.</p>
+<p>It is free, it works for any site, and it is provided by Google itself at <a href="https://search.google.com/search-console/about" target="_blank" rel="noopener noreferrer">Google Search Console</a>.</p>
+<h2 id="add-your-property">Add Your Property</h2>
+<p>Sign in with a Google account and click <strong>Add property</strong>. Choose the <strong>URL prefix</strong> option and enter your exact site address — for example <code>https://siam.dev/</code>. The URL prefix must match your site exactly, including <code>https://</code> and any trailing slash. The alternative, <strong>Domain</strong> property, covers all subdomains but requires DNS verification.</p>
+<h2 id="verify-ownership">Verify Ownership</h2>
+<p>Google needs proof that the site is yours. The simplest method for a static site is the HTML tag: Search Console gives you a <code>&lt;meta&gt;</code> tag to paste into the <code>&lt;head&gt;</code> of your homepage. Add it, deploy, and click <strong>Verify</strong>. Other methods include uploading an HTML file to your site root, or adding a DNS TXT record at your registrar. Any one method is enough — pick the one that fits your setup.</p>
+<p>Verification is a one-time step. Once verified, the property stays yours, and you can add other people (for example a collaborator) with limited permissions.</p>
+<h2 id="submit-your-sitemap">Submit Your Sitemap</h2>
+<p>After verification, open <strong>Sitemaps</strong> in the left menu and submit your sitemap URL — usually <code>https://yourdomain.com/sitemap.xml</code>. A sitemap is a simple XML file listing your pages; it helps Google discover them, especially new ones. Your sitemap must list only pages that actually exist, and every URL in it must return a 200 response.</p>
+<p>Then use <strong>URL Inspection</strong> to check your homepage: paste the URL, and Search Console will tell you whether Google can index it, when it was last crawled, and whether the mobile version renders correctly. If a page is not indexed, the inspection tool will usually say why — and it has a <strong>Request Indexing</strong> button for pages you have just fixed.</p>
+<h2 id="reports-worth-reading">Reports Worth Reading</h2>
+<ul>
+<li><strong>Performance:</strong> clicks, impressions, average position and the exact queries people searched. Sort by impressions to find pages that appear in search but are rarely clicked — those are title and description problems.</li>
+<li><strong>Pages (Indexing):</strong> which pages are indexed and which are not, with reasons. Fix the reasons, not the symptom.</li>
+<li><strong>Core Web Vitals:</strong> real-user speed data, grouped into Good, Needs Improvement and Poor. See <a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a>.</li>
+<li><strong>Mobile Usability:</strong> problems that affect phone visitors — text too small, clickable elements too close together, content wider than the screen.</li>
+<li><strong>Links:</strong> which sites link to you, and which of your own pages get the most internal links.</li>
+</ul>
+<h2 id="common-issues">Common Issues</h2>
+<p><strong>“Page is not indexed”</strong> usually means the page is new (give it time), blocked by robots.txt, marked noindex, or a duplicate of another page. <strong>“Crawled — currently not indexed”</strong> often means Google considers the page thin or duplicative — add real, unique content. <strong>“Discovered — currently not indexed”</strong> means Google knows the URL exists but has not crawled it yet; a sitemap and internal links help.</p>
+<p>Check <a href="https://status.search.google.com/" target="_blank" rel="noopener noreferrer">Google Search Status</a> if something looks wrong across the board — occasionally the problem is on Google's side, not yours.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Search Console is free, official and honest: it shows you what Google sees, what people search for, and what is broken. Set it up the day your site launches, submit your sitemap, and check the reports once a week. Most SEO improvement is just fixing what the reports already told you.</p>
+<p>Continue with the <a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a> and <a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a>.</p>
+
+    <section aria-labelledby="related">
+      <h2 id="related">Related Articles</h2>
+      <ul>
+<li><a href="/blog/seo/technical-seo-guide.html">Technical SEO Checklist</a></li><li><a href="/blog/seo/core-web-vitals.html">Core Web Vitals Explained</a></li><li><a href="/blog/javascript/github-pages-custom-domain.html">How to Connect a Custom Domain to GitHub Pages</a></li>
+      </ul>
+    </section>
+    <p style="margin-top:32px"><a href="/blog/">&larr; Back to the blog</a> &middot; <a href="/blog/categories/seo/">More Website SEO articles</a></p>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="../../">SIAM<span>.DEV</span></a>
+        <p style="margin-top:12px">Building Modern Websites. Creating Digital Experiences.</p>
+        <p>SP Siam Ahmed — Full Stack Web Developer from Bangladesh.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../projects/">Projects</a></li>
+          <li><a href="../../skills/">Skills</a></li>
+          <li><a href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://github.com/Spsiamahmed" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.youtube.com/@SP-SIAM-AHMED" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com/spsiamahmed1111" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:spsiamahmed1111@gmail.com">spsiamahmed1111@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SP Siam Ahmed. All rights reserved.</span>
+      <span><a href="../../privacy-policy/">Privacy Policy</a> &middot; <a href="../../sitemap.xml">Sitemap</a></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+<script src="../../script.js" defer></script>
+</body>
+</html>

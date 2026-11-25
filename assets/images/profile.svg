@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Monogram portrait of SP Siam Ahmed">
+<rect width="480" height="480" rx="24" fill="#111116"/>
+<circle cx="240" cy="200" r="110" fill="#8b5cf6" opacity="0.25"/>
+<circle cx="240" cy="200" r="88" fill="#18181b" stroke="#8b5cf6" stroke-width="3"/>
+<text x="240" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">SP</text>
+<text x="240" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">SP Siam Ahmed</text>
+<text x="240" y="396" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#a1a1aa">Full Stack Web Developer</text>
+<text x="240" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#3b82f6">Bangladesh</text>
+</svg>
